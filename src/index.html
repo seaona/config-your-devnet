@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devnet Config</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<script src="/static/js/index.js"></script>
+
+<body>
+    <nav class="nav">
+        <a href="/" class="nav__link" data-link>Github</a>
+    </nav>
+    <div id="app"></div>
+    <div id="container">
+        <h1>Devnet Config</h1>
+
+        <h3>ERC20</h3>
+        <div class="columns-3">
+            <div>
+                <div>50 ETH</div>
+                <img src="./static/eth.png" width="50">
+            </div>
+            <div>
+                <div>50 BNB</div>
+                <img src="./static/bnb.png" width="50">
+            </div>
+            <div>
+                <div>50 MATIC</div>
+                <img src="./static/matic.png" width="50">
+            </div>
+            <div>
+                <div>50 USDC</div>
+                <img src="./static/usdc.png" width="50">
+            </div>
+            <div>
+                <div>50 USDT</div>
+                <img src="./static/usdt.png" width="50">
+            </div>
+            <div>
+                <div>50 UNI</div>
+                <img src="./static/uni.png" width="50">
+            </div>
+            <div>
+                <div>50 DAI</div>
+                <img src="./static/dai.png" width="50">
+            </div>
+        </div>
+
+        <h3>ERC721</h3>
+        <div class="columns-3">
+            <div>
+                <div>Cryptokitty #1359295</div>
+                <img src="./static/cryptokitty.png" width="200">
+            </div>
+        </div>
+        <br>
+        <h3>Enter the Address to seed</h3>
+
+        <div id="input">
+            <input type="text" id="entry">
+            <br>
+            <button id="copy">Export Config in Clipboard</button>
+        </div>
+        <div class="result">
+            Your Config has been copied to the clipboard
+        </div>
+    </div>
+</body>
+</html>

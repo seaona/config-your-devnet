@@ -1,0 +1,160 @@
+body {
+    margin: 0 0 0 var(--nav-width);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.nav {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 90%; /* Full width */
+  padding-top: 15px;
+}
+
+/* container */
+.columns-3 {
+  width: 100%;
+  display:flex;
+  column-gap: 50px;
+}
+
+#input {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+/* Links inside the navbar */
+.nav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  float: right;
+}
+
+/* Change background on mouse-over */
+.nav a:hover {
+  color: #44b0a2;
+}
+
+#app {
+    margin: 2em;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 80px;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 50px;
+    text-align: center;
+}
+
+h3 {
+    font-weight: 100;
+    font-size: 40px;
+    text-align: center;
+
+}
+
+#container {
+    margin: auto;
+    width: 60%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table td {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.set {
+  background-color: green;
+}
+
+.search-result {
+  color: red;
+}
+
+a {
+    color: #009579;
+}
+
+input {
+    width: 700px;
+    font-size: 18px;
+    color:dimgrey;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-size: 18px;
+  font-weight: 400;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;    
+    background-color:  rgba(204, 204, 204, 0.2);
+    padding: 15px;
+    color: #333;
+    font-style: italic;
+    font-size: 16px;   
+}
+
+.row {
+    display: flex;
+  }
+  
+.column {
+    flex: 50%;
+    margin: 3px;
+  }
+
+  .result {
+    visibility: hidden;
+  }

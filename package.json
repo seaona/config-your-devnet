@@ -1,0 +1,21 @@
+{
+  "name": "devnet-config",
+  "version": "1.0.0",
+  "description": "Configure Your Tenderly Network",
+  "main": "app.js",
+  "repository": "https://github.com/seaona/config-your-devnet",
+  "author": "Seaona",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ethers": "^6.7.1",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
