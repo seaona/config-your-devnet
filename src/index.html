@@ -12,62 +12,75 @@
 
 <body>
     <nav class="nav">
-        <a href="/" class="nav__link" data-link>Github</a>
+        <a href="https://github.com/seaona/devnet-config" class="nav__link" data-link target="_blank">Github</a>
     </nav>
     <div id="app"></div>
     <div id="container">
         <h1>Devnet Config</h1>
+        <h3>Enter the Address to seed</h3>
 
-        <h3>ERC20</h3>
+        <div id="input">
+            <input type="text" id="address">
+            <br>
+            <button id="copy">Export Config in Clipboard</button>
+        </div>
+        <div id="result">
+            <p>
+                Your config has been copied to the clipboard.
+            </p>
+
+        </div>
+        <a href="https://dashboard.tenderly.co/" target="_blank">
+            Go to Tenderly for creating your own devnet and paste your config.
+        </a>
+        <h3>ETH you get</h3>
+        <div>
+            <div>50 ETH</div>
+            <img src="./static/eth.png" width="50">
+        </div>
+        <h3>ERC20 you get</h3>
         <div class="columns-3">
             <div>
-                <div>50 ETH</div>
-                <img src="./static/eth.png" width="50">
-            </div>
-            <div>
-                <div>50 BNB</div>
+                <a href="https://etherscan.io/token/0xB8c77482e45F1F44dE1745F52C74426C631bDD52" target="_blank">50 BNB</a>
                 <img src="./static/bnb.png" width="50">
             </div>
             <div>
-                <div>50 MATIC</div>
+                <a href="https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2" target="_blank">50 WETH</a>
+                <img src="./static/weth.png" width="50">
+            </div>
+            <div>
+                <a href="https://etherscan.io/token/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0" target="_blank">50 MATIC</a>
                 <img src="./static/matic.png" width="50">
             </div>
             <div>
-                <div>50 USDC</div>
-                <img src="./static/usdc.png" width="50">
-            </div>
-            <div>
-                <div>50 USDT</div>
-                <img src="./static/usdt.png" width="50">
-            </div>
-            <div>
-                <div>50 UNI</div>
+                <a href="https://etherscan.io/token/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984" target="_blank">50 UNI</a>
                 <img src="./static/uni.png" width="50">
             </div>
             <div>
-                <div>50 DAI</div>
+                <a href="https://etherscan.io/token/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48" target="_blank">50 USDC</a>
+                <img src="./static/usdc.png" width="50">
+            </div>
+            <div>
+                <a href="https://etherscan.io/token/0x4Fabb145d64652a948d72533023f6E7A623C7C53" target="_blank">50 BUSD</a>
+                <img src="./static/busd.jpg" width="50">
+            </div>
+            <div>
+                <a href="https://etherscan.io/token/0xdAC17F958D2ee523a2206206994597C13D831ec7" target="_blank">50 USDT</a>
+                <img src="./static/usdt.png" width="50">
+            </div>
+            <div>
+                <a href="https://etherscan.io/token/0x6B175474E89094C44Da98b954EedeAC495271d0F" target="_blank">50 DAI</a>
                 <img src="./static/dai.png" width="50">
             </div>
         </div>
 
-        <h3>ERC721</h3>
-        <div class="columns-3">
+        <h3>NFTs you get</h3>
             <div>
-                <div>Cryptokitty #1359295</div>
+                <a href="https://opensea.io/assets/ethereum/0x06012c8cf97bead5deae237070f9587f8e7a266d/1359295" target="_blank">Cryptokitty #1359295</a>
+                <br>
                 <img src="./static/cryptokitty.png" width="200">
             </div>
-        </div>
         <br>
-        <h3>Enter the Address to seed</h3>
-
-        <div id="input">
-            <input type="text" id="entry">
-            <br>
-            <button id="copy">Export Config in Clipboard</button>
-        </div>
-        <div class="result">
-            Your Config has been copied to the clipboard
-        </div>
     </div>
 </body>
 </html>
