@@ -1,3 +1,5 @@
+const keccak256 = window.keccak_256;
+
 /* Event listeners */
 window.onload=function(){
   const copy = document.getElementById("copy");
@@ -5,10 +7,30 @@ window.onload=function(){
   document.getElementById("result").classList.add("hidden");
 }
 
+function hexToString(hex) {
+  if (!hex.match(/^[0-9a-fA-F]+$/)) {
+    throw new Error('is not a hex string.');
+  }
+  if (hex.length % 2 !== 0) {
+    hex = '0' + hex;
+  }
+  var bytes = [];
+  for (var n = 0; n < hex.length; n += 2) {
+    var code = parseInt(hex.substr(n, 2), 16)
+    bytes.push(code);
+  }
+  return bytes;
+}
+
 /* Functions */
 function getConfig() {
   const address = document.getElementById("address").value.toLowerCase();
   const addressWithoutPrefix = address.substring(2).toLowerCase();
+
+  // DAI STORAGE
+  let daiStorage = `00000000000000000000000${addressWithoutPrefix}0000000000000000000000000000000000000000000000000000000000000002`;
+  daiStorage = `0x${keccak256(hexToString(daiStorage))}`
+
   const config = `
   
   # Learn how to configure DevNet templates using YAML here: https://docs.tenderly.co/devnets/yaml-template
@@ -34,42 +56,12 @@ template:
     - address: 0x06012c8cf97BEaD5deAe237070F9587f8E7A266d # CRYPTOKITTIES
       slots:
         - 0xd9fbdcbb8ce2d4417e6ad68850ec200e7d37b49be27a4bff9848b9f2d04aa79a: 0x000000000000000000000000${addressWithoutPrefix}
+    - address: 0x6b175474e89094c44da98b954eedeac495271d0f # DAI
+      slots:
+          - ${daiStorage}: 0x0000000000000000000000000000000000000000000000004563918244F40000
   balances:
     - address: ${address}
       amount: 5000000000000000000
-  erc20:
-    - contract: 0x6B175474E89094C44Da98b954EedeAC495271d0F # DAI
-      balances:
-        - address: ${address}
-          amount: 5000000000000000000
-    - contract: 0x4Fabb145d64652a948d72533023f6E7A623C7C53 # BUSD
-      balances:
-        - address: ${address}
-          amount: 5000000000000000000
-    - contract: 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 # WETH
-      balances:
-        - address: ${address}
-          amount: 5000000000000000000
-    - contract: 0xB8c77482e45F1F44dE1745F52C74426C631bDD52 # BNB
-      balances:
-        - address: ${address}
-          amount: 5000000000000000000
-    - contract: 0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0 # MATIC
-      balances:
-        - address: ${address}
-          amount: 5000000000000000000
-    - contract: 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 # UNI
-      balances:
-        - address: ${address}
-          amount: 5000000000000000000
-    - contract: 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 # USDC
-      balances:
-        - address: ${address}
-          amount: 5000000000000000000
-    - contract: 0xdAC17F958D2ee523a2206206994597C13D831ec7 # USDT
-      balances:
-        - address: ${address}
-          amount: 5000000
   `
   copyOnClipboard(config);
   document.getElementById("result").classList.remove("hidden");
