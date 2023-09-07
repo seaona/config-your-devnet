@@ -1,9 +1,6 @@
 # Configure your own Tenderly Network
 
-<video width="700" controls>
-  <source src="./src/static/devnet-seeder.mp4" type="video/mp4">
-</video>
-
+- [Demo](./src/static/devnet-seeder.mp4)
 - [Live project](https://devnet-config.onrender.com)
 
 ## Run locally
