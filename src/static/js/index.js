@@ -51,6 +51,10 @@ function getConfig() {
   let uniStorage = `00000000000000000000000${addressWithoutPrefix}0000000000000000000000000000000000000000000000000000000000000004`;
   uniStorage = `0x${keccak256(hexToString(uniStorage))}`
 
+  // STAT STORAGE
+  let statStorage = `00000000000000000000000${addressWithoutPrefix}0000000000000000000000000000000000000000000000000000000000000003`;
+  statStorage = `0x${keccak256(hexToString(statStorage))}`
+
   const config = `
   
   # Learn how to configure DevNet templates using YAML here: https://docs.tenderly.co/devnets/yaml-template
@@ -100,6 +104,10 @@ template:
     - address: 0xB8c77482e45F1F44dE1745F52C74426C631bDD52 # BNB
       slots:
         - ${bnbStorage}: 0x000000000000000000000000000000000000000000000002B5E3AF16B1880000
+    - address: 0x4FC15c91a9c4A9efB404174464687E8e128730C2 # STAT
+      slots:
+        - ${statStorage}: 0x000000000000000000000000000000000000000000000002B5E3AF16B1880000
+  
   balances:
     - address: ${address}
       amount: 5000000000000000000
